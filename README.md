@@ -7,8 +7,11 @@ so on. Includes Pico firmware and a desktop app with a throttle slider,
 hold-to-ramp buttons, a calibration panel, and a built-in console
 
 ##Installation
+
 Grab the exe from the releases and run it this will be your GUI
+
 For installation on pico:
+
 Grab the uf2 file from releases then restart your pico while holding bootsel then put the firmware file in the RPI-RP2 drive
 
 No Arduino IDE, no board packages, nothing installed locally. If you'd rather

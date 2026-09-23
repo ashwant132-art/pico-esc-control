@@ -6,7 +6,7 @@ signal** — BLHeli_S, BLHeli_32 (in PWM mode), SimonK, brushed-motor ESCs, and
 so on. Includes Pico firmware and a desktop app with a throttle slider,
 hold-to-ramp buttons, a calibration panel, and a built-in console
 
-##Installation
+Installation
 
 Grab the exe from the releases and run it this will be your GUI
 

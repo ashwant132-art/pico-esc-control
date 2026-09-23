@@ -4,19 +4,12 @@ Control an ESC's motor speed from a PC, using a Raspberry Pi Pico as the PWM
 signal generator. Works with **any ESC that accepts a standard PWM throttle
 signal** — BLHeli_S, BLHeli_32 (in PWM mode), SimonK, brushed-motor ESCs, and
 so on. Includes Pico firmware and a desktop app with a throttle slider,
-hold-to-ramp buttons, a calibration panel, and a built-in console/CLI.
+hold-to-ramp buttons, a calibration panel, and a built-in console
 
-## Get the firmware without compiling anything
-
-Every push to `firmware/` is automatically compiled by GitHub Actions into a
-ready-to-flash `.uf2`:
-
-1. Go to this repo's **Actions** tab → the latest **Build firmware (.uf2)** run
-   → download the `pico_esc_throttle-uf2` artifact.
-2. Hold the Pico's **BOOTSEL** button, plug it into USB, release BOOTSEL. It
-   shows up as a USB drive named `RPI-RP2`.
-3. Drag `pico_esc_throttle.uf2` onto that drive. The Pico reboots running the
-   new firmware automatically.
+##Installation
+Grab the exe from the releases and run it this will be your GUI
+For installation on pico:
+Grab the uf2 file from releases then restart your pico while holding bootsel then put the firmware file in the RPI-RP2 drive
 
 No Arduino IDE, no board packages, nothing installed locally. If you'd rather
 build it yourself instead (e.g. after editing the sketch), see
@@ -98,9 +91,6 @@ background. Use `timeout 0` to disable that if you're typing commands by hand
 in a plain serial terminal.
 
 ## Building the firmware manually
-
-Only needed if you don't want to use the GitHub Actions build, or you're
-actively editing the sketch and want a fast local compile-test loop.
 
 ### Option A: Arduino IDE
 

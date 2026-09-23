@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# PyInstaller build output
+build/
+
+*.spec
+
+# Arduino IDE local exports
+*.hex
+*.elf
+*.bin
+*.uf2

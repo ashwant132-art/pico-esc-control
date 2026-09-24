@@ -1,0 +1,24 @@
+name: Arduino C++ Compile Check
+
+on: [push, pull_request]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Arduino CLI
+      uses: arduino/setup-arduino-cli@v2
+
+    - name: Install Platform Core
+      run: |
+        # This installs the RP2040 board core. Change to 'arduino:avr' if compiling for an Uno.
+        arduino-cli core update-index
+        arduino-cli core install rp2040:rp2040
+
+    - name: Compile C++ Sketch
+      uses: arduino/compile-sketches@v1
+      with:
+        fqbn: "rp2040:rp2040:rp2040" # Fully Qualified Board Name
+        sketch-paths: "./firmware"    # Points to your firmware directory
